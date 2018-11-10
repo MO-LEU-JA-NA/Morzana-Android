@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@android:color/white"
     android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
 
     <androidx.appcompat.widget.Toolbar
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/free_script"
+            android:textColor="?colorPrimary"
             android:gravity="center"
             android:includeFontPadding="true"
             android:paddingTop="10dp"

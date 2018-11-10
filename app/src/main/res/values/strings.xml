@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">모르자나</string>
+    <string name="app_name_eng">Morzana</string>
     <string name="navigation_drawer_open">열기</string>
     <string name="navigation_drawer_close">닫기</string>
     <string name="action_search">검색</string>
+    <string name="profile">프로필</string>
 </resources>

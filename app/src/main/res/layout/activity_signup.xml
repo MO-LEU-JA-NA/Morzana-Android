@@ -2,24 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="@drawable/linlay_logo"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_logo"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Morzana"
-            android:textAlignment="center"
-            android:textColor="#ff671f"
-            android:textSize="30sp" />
-    </LinearLayout>
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,212 +36,177 @@
 
         <TextView
             android:id="@+id/tv_id"
-            android:layout_width="45dp"
-            android:layout_height="34dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:text="ID"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="25dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="17dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/et_id"
+            app:layout_constraintEnd_toStartOf="@+id/et_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/et_id" />
 
         <EditText
             android:id="@+id/et_id"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="46dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="420dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/tv_id"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintBottom_toBottomOf="@+id/btn_idcheck"
+            app:layout_constraintEnd_toStartOf="@+id/btn_idcheck"
+            app:layout_constraintTop_toTopOf="@+id/btn_idcheck" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_idcheck"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="62dp"
-            android:layout_height="53dp"
-            android:layout_marginStart="6dp"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="416dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/btn_idcheck"
             android:backgroundTint="#FFFFFF"
             android:text="중복확인"
             android:textAlignment="center"
             android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/et_id"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_pw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginBottom="372dp"
             android:text="PW"
             android:textColor="#000000"
             android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/et_pw"
+            app:layout_constraintEnd_toEndOf="@+id/tv_id"
+            app:layout_constraintStart_toStartOf="@+id/tv_id"
+            app:layout_constraintTop_toTopOf="@+id/et_pw" />
 
         <EditText
             android:id="@+id/et_pw"
-            android:layout_width=" "
-            android:layout_height="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="372dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_idcheck"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="@+id/et_id"
+            app:layout_constraintStart_toStartOf="@+id/et_id"
+            app:layout_constraintTop_toBottomOf="@+id/btn_idcheck" />
 
         <TextView
             android:id="@+id/tv_idcheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="21dp"
             android:text="PW확인"
             android:textColor="#000000"
             android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/tv_name"
-            app:layout_constraintEnd_toStartOf="@+id/et_idcheck"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pw" />
+            app:layout_constraintBottom_toBottomOf="@+id/et_idcheck"
+            app:layout_constraintEnd_toEndOf="@+id/tv_pw"
+            app:layout_constraintStart_toStartOf="@+id/tv_pw"
+            app:layout_constraintTop_toTopOf="@+id/et_idcheck" />
 
         <EditText
             android:id="@+id/et_idcheck"
-            android:layout_width="280dp"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginBottom="320dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_pw"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintEnd_toEndOf="@+id/et_pw"
+            app:layout_constraintStart_toStartOf="@+id/et_pw"
+            app:layout_constraintTop_toBottomOf="@+id/et_pw" />
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="329dp"
-            android:layout_marginBottom="272dp"
             android:text="이름"
             android:textColor="#000000"
             android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nickname"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintBottom_toBottomOf="@+id/et_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_idcheck"
+            app:layout_constraintStart_toStartOf="@+id/tv_idcheck"
+            app:layout_constraintTop_toTopOf="@+id/et_name" />
 
         <EditText
             android:id="@+id/et_name"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="272dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/tv_name"
+            app:layout_constraintEnd_toEndOf="@+id/et_idcheck"
+            app:layout_constraintStart_toStartOf="@+id/et_idcheck"
             app:layout_constraintTop_toBottomOf="@+id/et_idcheck" />
 
         <TextView
             android:id="@+id/tv_nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
             android:text="닉네임"
             android:textColor="#000000"
             android:textSize="25dp"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/et_nickname"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toTopOf="@+id/et_nickname" />
 
         <EditText
             android:id="@+id/et_nickname"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="222dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
             app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
         <TextView
             android:id="@+id/tv_phonenum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:layout_marginTop="19dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginBottom="177dp"
             android:text="전화번호"
             android:textColor="#000000"
             android:textSize="22dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/et_phonenum"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nickname"
+            app:layout_constraintStart_toStartOf="@+id/tv_nickname"
             app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
 
         <EditText
             android:id="@+id/et_phonenum"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginStart="3dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginBottom="174dp"
             android:background="@drawable/et_signup"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv_phonenum"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_phonenum"
+            app:layout_constraintEnd_toEndOf="@+id/et_nickname"
+            app:layout_constraintStart_toStartOf="@+id/et_nickname"
             app:layout_constraintTop_toBottomOf="@+id/et_nickname" />
 
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="가입하기"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/btn_signup"
+            android:text="가입하기"
             android:textColor="#000000"
-            tools:layout_editor_absoluteX="293dp"
-            tools:layout_editor_absoluteY="426dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
