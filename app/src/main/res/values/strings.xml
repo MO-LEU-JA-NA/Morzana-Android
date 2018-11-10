@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">모르자나</string>
+    <string name="navigation_drawer_open">열기</string>
+    <string name="navigation_drawer_close">닫기</string>
 </resources>
