@@ -1,5 +1,7 @@
 package com.moleujana.morzana.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,7 +16,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends BaseActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -37,6 +40,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         actionBarDrawerToggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    public static void start(Context context) {
+        Intent starter = new Intent(context, MainActivity.class);
+        context.startActivity(starter);
     }
 
     @Override
