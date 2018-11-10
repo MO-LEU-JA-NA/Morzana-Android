@@ -3,27 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item
-        android:id="@+id/nav_manage_block"
-        android:title="차단 관리" />
-
-    <item
-        android:id="@+id/nav_settings"
-        android:title="설정" />
-
-    <item
-        android:id="@+id/nav_app_info"
-        android:title="정보" />
-
-    <item
-        android:id="@+id/nav_report_bug"
-        android:title="버그 신고" />
-
-    <item
-        android:id="@+id/nav_logout"
-        android:title="로그아웃" />
-
-    <!--<group android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
             android:title="Import" />
@@ -47,6 +27,6 @@
                 android:id="@+id/nav_send"
                 android:title="Send" />
         </menu>
-    </item>-->
+    </item>
 
 </menu>
